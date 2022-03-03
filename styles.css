@@ -1,0 +1,113 @@
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 2.5vw;
+  padding: 40px;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 6vw;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+button {
+  border-radius: 50px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.boundary {
+  width: 80%;
+  border: 2px solid #000;
+  border-radius: 20px;
+  background: linear-gradient(
+    111.4deg,
+    rgb(209, 231, 235) 7.4%,
+    rgb(238, 219, 199) 51.4%,
+    rgb(255, 159, 122) 82.6%,
+    rgb(255, 109, 58) 100.2%
+  );
+  padding: 25px;
+  margin: 0 auto;
+}
+
+.search .today {
+  padding: 40px;
+}
+
+.today-date {
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.main-icon {
+  font-size: 20vw;
+  padding: 20px 0px 20px 0px;
+}
+
+.today-temp {
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.today-summary {
+  list-style: none;
+  font-size: 1.5vw;
+  padding: 0;
+}
+
+.search {
+  padding-bottom: 40px;
+  font-size: 1.75vw;
+}
+
+.row {
+  text-align: center;
+}
+
+.today {
+  text-align: left;
+}
+
+.col {
+  position: relative;
+  width: 100%;
+}
+
+.col-6 {
+  margin-top: 40px;
+}
+
+.day {
+  display: block;
+  font-size: 1.75vw;
+}
+
+.weekly-icon {
+  font-size: 5vw;
+  padding: 7px;
+}
+
+.weekly-temps {
+  font-size: 1.75vw;
+}
