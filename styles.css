@@ -111,3 +111,8 @@ button:hover {
 .weekly-temps {
   font-size: 1.75vw;
 }
+
+.signature {
+  text-align: center;
+  font-size: 12px;
+}
