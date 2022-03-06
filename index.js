@@ -48,12 +48,6 @@ function changeDate() {
 
 changeDate();
 
-// OpenWeather Access
-//let apiKey = "fc4cce9256dbfa5057522b9ccaf07872";
-//let units = "imperial";
-//let city = "Minneapolis";
-//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
 // changing Heading and Temp
 function changeHtml(response) {
   document.querySelector("#city-header").innerHTML = response.data.name;
