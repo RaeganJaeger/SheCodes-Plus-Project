@@ -114,7 +114,7 @@ function displayCelcius(event) {
   let tempElement = document.querySelector("#today-temp");
   fahrenheitLink.classList.remove("active");
   celciusLink.classList.add("active");
-  let celciusTemp = farenheitTemp - 32;
+  let celciusTemp = ((farenheitTemp - 32) * 5) / 9;
   tempElement.innerHTML = Math.round(celciusTemp);
   document.querySelector("#degreeUnit").innerHTML = "C";
 }
