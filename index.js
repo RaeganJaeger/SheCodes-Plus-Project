@@ -50,10 +50,26 @@ changeDate();
 
 // changing Heading and Temp
 function changeHtml(response) {
-  document.querySelector("#city-header").innerHTML = response.data.name;
-  document.querySelector("#today-temp").innerHTML = Math.round(
-    response.data.main.temp
+  let temperatureElement = document.querySelector("#today-temp");
+  let cityElement = document.querySelector("#city-header");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#main-icon");
+
+  farenheitTemp = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(farenheitTemp);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 // Searching the City
@@ -91,3 +107,36 @@ function getCurrentPosition(event) {
 
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getCurrentPosition);
+
+// changing F to C buttons
+function displayCelcius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#today-temp");
+  fahrenheitLink.classList.remove("active");
+  celciusLink.classList.add("active");
+  let celciusTemp = farenheitTemp - 32;
+  tempElement.innerHTML = Math.round(celciusTemp);
+  document.querySelector("#degreeUnit").innerHTML = "C";
+}
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.add("active");
+  celciusLink.classList.remove("active");
+  let tempElement = document.querySelector("#today-temp");
+  tempElement.innerHTML = Math.round(farenheitTemp);
+  document.querySelector("#degreeUnit").innerHTML = "F";
+}
+
+let farenheitTemp = null;
+
+//let tempElement = document.querySelector("today-temp");
+
+let celciusLink = document.querySelector("#celsius-link");
+celciusLink.addEventListener("click", displayCelcius);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+// search
+citySearch("Minneapolis");
