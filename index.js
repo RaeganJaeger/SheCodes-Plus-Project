@@ -48,8 +48,9 @@ function changeDate() {
 
 changeDate();
 
-//forecast
-function displayForecast() {
+// change forecast
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
@@ -77,6 +78,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+// get coordinated for forecast
+function getForecast(coordinates) {
+  let apiKey = "fc4cce9256dbfa5057522b9ccaf07872";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // changing Heading and Temp
 function changeHtml(response) {
   let temperatureElement = document.querySelector("#today-temp");
@@ -99,6 +107,8 @@ function changeHtml(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 // Searching the City
@@ -169,5 +179,3 @@ fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 // search
 citySearch("Minneapolis");
-
-displayForecast();
