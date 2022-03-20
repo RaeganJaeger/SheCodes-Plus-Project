@@ -94,11 +94,26 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-// get coordinated for forecast
+// get coordinates for forecast
 function getForecast(coordinates) {
   let apiKey = "fc4cce9256dbfa5057522b9ccaf07872";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
+}
+
+// get Condition to change the background
+function changeBackground(response) {
+  let conditionId = response.data.weather[0].id;
+  let boxColor = document.querySelector("#box-color");
+  //let sunset = response.data.sys.sunset;
+  //let sunsetTime = new Date(sunset * 1000);
+  //console.log(sunsetTime);
+  console.log(conditionId);
+  if (conditionId === 800 || conditionId <= 802) {
+    boxColor.classList.add("sunny");
+  } else {
+    boxColor.classList.add("cloudy");
+  }
 }
 
 // changing Heading and Temp
@@ -133,6 +148,7 @@ function citySearch(city) {
   let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(changeHtml);
+  axios.get(apiUrl).then(changeBackground);
 }
 
 function formSubmission(event) {
@@ -153,6 +169,7 @@ function showPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(changeHtml);
+  axios.get(apiUrl).then(changeBackground);
 }
 
 function getCurrentPosition(event) {
