@@ -50,23 +50,23 @@ a:hover {
 
 .boundary {
   width: 60%;
-  border: 1.5px solid #000;
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
   margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .sunny {
-  background: linear-gradient(to top, #fff 0%, #dbf7ff 100%);
+  background-color: #eafdff;
 }
 
 .cloudy {
-  background: linear-gradient(180.3deg, #ededed 5.5%, #abbfd3 90.2%);
+  background-color: #f0faf3;
 }
 
 .night {
-  background-color: #004472;
-  color: #fff;
+  background-color: #bbc5dd;
 }
 
 .search .today {
@@ -106,7 +106,8 @@ a:hover {
 
 .row {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .today {
@@ -132,6 +133,7 @@ a:hover {
 }
 
 .signature {
+  padding-top: 15px;
   text-align: center;
   font-size: 12px;
 }
