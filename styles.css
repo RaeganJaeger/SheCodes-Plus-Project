@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-family: "Rubik", sans-serif;
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: normal;
   margin-bottom: 0;
 }
@@ -20,7 +20,7 @@ h2 {
 }
 
 button {
-  border-radius: 50px;
+  border-radius: 40px;
   margin: 0 auto;
   color: #fff;
   background-color: #000;
@@ -28,7 +28,6 @@ button {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   text-align: center;
-  padding: 5px 10px 5px 10px;
 }
 
 button:hover {
@@ -36,18 +35,24 @@ button:hover {
   color: #000;
 }
 
+i {
+  font-size: 1.5vw;
+}
+
+a {
+  text-decoration: none;
+  color: #868686;
+}
+
+a:hover {
+  font-weight: 800;
+}
+
 .boundary {
-  width: 80%;
-  border: 2px solid #000;
-  border-radius: 20px;
-  background: linear-gradient(
-    111.4deg,
-    rgb(209, 231, 235) 7.4%,
-    rgb(238, 219, 199) 51.4%,
-    rgb(255, 159, 122) 82.6%,
-    rgb(255, 109, 58) 100.2%
-  );
-  padding: 25px;
+  width: 60%;
+  border: 1.5px solid #000;
+  border-radius: 10px;
+  padding: 20px;
   margin: 0 auto;
 }
 
@@ -67,23 +72,28 @@ button:hover {
 }
 
 .today-temp {
-  font-size: 6vw;
+  font-size: 4vw;
   font-weight: bold;
+}
+
+.degreeUnit {
+  font-size: 2vw;
 }
 
 .today-summary {
   list-style: none;
-  font-size: 1.5vw;
+  font-size: 1.05vw;
   padding: 0;
 }
 
 .search {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   font-size: 1.75vw;
 }
 
 .row {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .today {
@@ -104,11 +114,6 @@ button:hover {
   font-size: 1.75vw;
 }
 
-.weekly-icon {
-  font-size: 5vw;
-  padding: 7px;
-}
-
 .weekly-temps {
   font-size: 1.75vw;
 }
@@ -122,10 +127,34 @@ button:hover {
   color: black;
   cursor: default;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .active:hover {
   color: black;
   cursor: default;
   text-decoration: none;
+}
+
+.weather-forecast-temperatures {
+  font-size: 1.5vw;
+}
+
+.weather-forecast-temperature-max {
+  font-weight: bold;
+}
+
+.weather-forecast-temperature-min {
+  font-weight: 300;
+}
+
+.weather-forecast-date {
+  font-size: 1.5vw;
+}
+
+.sig-link:hover {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
+  background-clip: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
