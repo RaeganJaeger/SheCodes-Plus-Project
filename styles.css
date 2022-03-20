@@ -57,11 +57,16 @@ a:hover {
 }
 
 .sunny {
-  background-color: #ffe272;
+  background: linear-gradient(to top, #fff 0%, #dbf7ff 100%);
 }
 
 .cloudy {
-  background-color: #7590ad;
+  background: linear-gradient(180.3deg, #ededed 5.5%, #abbfd3 90.2%);
+}
+
+.night {
+  background-color: #004472;
+  color: #fff;
 }
 
 .search .today {

@@ -105,14 +105,22 @@ function getForecast(coordinates) {
 function changeBackground(response) {
   let conditionId = response.data.weather[0].id;
   let boxColor = document.querySelector("#box-color");
-  //let sunset = response.data.sys.sunset;
-  //let sunsetTime = new Date(sunset * 1000);
-  //console.log(sunsetTime);
-  console.log(conditionId);
-  if (conditionId === 800 || conditionId <= 802) {
+  let twilight = response.data.weather[0].icon;
+
+  if (conditionId === 800 || conditionId === 801 || conditionId === 802) {
     boxColor.classList.add("sunny");
+    boxColor.classList.remove("cloudy");
+    boxColor.classList.remove("night");
   } else {
     boxColor.classList.add("cloudy");
+    boxColor.classList.remove("sunny");
+    boxColor.classList.remove("night");
+  }
+
+  if (twilight.includes("n")) {
+    boxColor.classList.add("night");
+    boxColor.classList.remove("cloudy");
+    boxColor.classList.remove("sunny");
   }
 }
 
