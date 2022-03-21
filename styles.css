@@ -57,6 +57,12 @@ a:hover {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+@media (max-width: 600px) {
+  .boundary {
+    padding: 20px;
+  }
+}
+
 .sunny {
   background-color: #eafdff;
 }
@@ -84,9 +90,21 @@ a:hover {
   padding-top: 30px;
 }
 
+@media (max-width: 600px) {
+  .main-icon {
+    padding-top: 10px;
+  }
+}
+
 .today-temp {
   font-size: 4vw;
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .today-temp {
+    font-size: 6vw;
+  }
 }
 
 .degreeUnit {
@@ -99,9 +117,21 @@ a:hover {
   padding: 0;
 }
 
+@media (max-width: 600px) {
+  .today-summary {
+    font-size: 1.75vw;
+  }
+}
+
 .search {
   padding-bottom: 20px;
   font-size: 1.75vw;
+}
+
+@media (max-width: 600px) {
+  .search {
+    padding-bottom: 5px;
+  }
 }
 
 .row {
@@ -121,6 +151,18 @@ a:hover {
 
 .col-6 {
   margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .col-6 {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .col-4 {
+    padding: 0;
+  }
 }
 
 .day {
@@ -172,4 +214,17 @@ a:hover {
   background-clip: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .weather-forecast img {
+    max-width: 25px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .weather-forecast {
+    align-items: left;
+  }
 }
