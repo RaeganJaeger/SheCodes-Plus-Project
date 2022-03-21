@@ -14,8 +14,7 @@ h1 {
 h2 {
   font-family: "Rubik", sans-serif;
   font-size: 2vw;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: normal;
   margin-top: 0;
 }
 
@@ -46,6 +45,7 @@ a {
 
 a:hover {
   font-weight: 800;
+  color: #ec6f4d;
 }
 
 .boundary {
@@ -62,11 +62,11 @@ a:hover {
 }
 
 .cloudy {
-  background-color: #f0faf3;
+  background-color: #fafafa;
 }
 
 .night {
-  background-color: #bbc5dd;
+  background-color: #e4d8e1;
 }
 
 .search .today {
@@ -74,7 +74,7 @@ a:hover {
 }
 
 .today-date {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 2vw;
 }
 

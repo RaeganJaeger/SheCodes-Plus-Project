@@ -127,17 +127,20 @@ function changeBackground(response) {
 // changing Heading and Temp
 function changeHtml(response) {
   let temperatureElement = document.querySelector("#today-temp");
-  let cityElement = document.querySelector("#city-header");
+  let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#main-icon");
+  let countryElement = document.querySelector("#country");
+  //let headerElement = document.querySelector("#city-header");
 
   farenheitTemp = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(farenheitTemp);
   cityElement.innerHTML = response.data.name;
+  countryElement.innerHTML = response.data.sys.country;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
